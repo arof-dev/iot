@@ -28,7 +28,6 @@ wss.on('connection', (ws) => {
   });
 });
 
-// Передача уведомлений в модуль температуры
 notifyTemperatureClients((message) => {
   wss.clients.forEach((client) => {
     if (client.readyState === 1) {
